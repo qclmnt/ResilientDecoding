@@ -31,6 +31,11 @@ public struct Resilient<Value: Decodable>: Decodable {
     self.outcome = outcome
   }
 
+  public init(wrappedValue: Value) {
+        self.wrappedValue = wrappedValue
+        self.outcome = .decodedSuccessfully
+  }
+
   public var wrappedValue: Value
 
   let outcome: ResilientDecodingOutcome
