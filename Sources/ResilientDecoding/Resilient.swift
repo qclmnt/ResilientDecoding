@@ -31,7 +31,7 @@ public struct Resilient<Value: Decodable>: Decodable {
     self.outcome = outcome
   }
 
-  public let wrappedValue: Value
+  public var wrappedValue: Value
 
   let outcome: ResilientDecodingOutcome
 
